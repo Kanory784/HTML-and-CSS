@@ -3,56 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Розмітка таблицею</title>
+    <title>Table Layout</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
         table {
-            width: 100%;
-            height: 100vh;
             border-collapse: collapse;
+            width: 300px;
+            height: 400px;
+            border: 2px solid black;
         }
-        td {
-            border: 1px solid black;
-            text-align: center;
-        }
-        .header {
-            background-color: yellow;
-            height: 50px;
-        }
-        .left, .right {
-            background-color: blue;
-            width: 20%;
-        }
-        .content {
-            background-color: white;
-        }
-        .footer {
-            background-color: yellow;
-            height: 50px;
-        }
-        .red-box {
-            background-color: red;
-            width: 50%;
-            height: 30px;
-            margin: auto;
-        }
+		td{
+		border: 2px solid black;
+		}
+		.header, .footer{
+		height:50px;
+		background-color: #ffc107;
+		}
+		.header{
+		text-align: right;
+		position: relative;
+
+		}
+		.mid{
+		text-align: center;
+		}
+
+
+		.block1{
+		position: absolute;
+		top: 25%;
+		left: 5%;
+		width: 130px;
+		height: 40%;
+		border: 2px solid black;
+		background-color: white;
+		}
+		
+		.block2{
+		width: 100%;
+		height:30px;
+		background-color: red;
+		position: absolute;
+		bottom:0px;
+
+
+		}
+		.left{
+		width: 96px;
+		background-color: #007bff;
+		}
+		.right{
+		height: 230px;
+		display:flex;
+		flex-direction: row;
+			
+		}
+		.block-left, .block-right{
+		width: 45%;
+		height: 210px;
+		margin: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		}
+		.block-left{
+		position:relative;
+		border: 2px solid grey;
+		}
+		.block-right{
+		border: 2px solid black;
+		background-color: #007bff;
+		}
+		
+
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <td colspan="3" class="header">1</td>
-        </tr>
-        <tr>
-            <td class="left">2</td>
-            <td class="content">
-                3
-                <div class="red-box"></div>
-            </td>
-            <td class="right">4</td>
-        </tr>
-        <tr>
-            <td colspan="3" class="footer">5</td>
-        </tr>
+			<td colspan="3" class="header">
+			<div class="block1"></div>
+			<h1 style="margin-right:40px;">1</h1>
+			</td>
+		</tr>
+		<tr class="mid">
+			<td class="left">
+				<h1>2</h1>
+			</td>
+
+			<td class="right">
+				<div class="block-left">
+					<h1>3</h1>
+					<div class="block2"></div>
+				</div>
+				<div class="block-right">
+					<h1>4</h1>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="footer">
+			<h1 style="margin-left:40px;">5</h1>
+			</td>
+		</tr>
     </table>
 </body>
 </html>
