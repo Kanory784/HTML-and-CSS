@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка з формою</title>
+</head>
+<body>
+    <h1>Форма</h1>
+    <form action="#" method="post">
+        <label for="user_name">Прізвище, ім'я, по батькові:</label><br>
+        <input type="text" id="user_name" name="user_name" required><br><br>
+        
+        <label for="user_email">E-mail:</label><br>
+        <input type="email" id="user_email" name="user_email"><br><br>
+        
+        <label for="user_birthdate">Дата народження:</label><br>
+        <input type="date" id="user_birthdate" name="user_birthdate" required><br><br>
+        
+        <label for="user_sex">Стать:</label><br>
+        <input type="radio" id="male" name="user_sex" value="Чоловіча" required>
+        <label for="male">Чоловіча</label><br>
+        <input type="radio" id="female" name="user_sex" value="Жіноча" required>
+        <label for="female">Жіноча</label><br><br>
+        
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>
